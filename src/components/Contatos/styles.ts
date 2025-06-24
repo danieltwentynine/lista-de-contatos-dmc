@@ -83,3 +83,17 @@ export const BotaoSCancelar = styled(Botao)`
 export const BotaoRemover = styled(Botao)`
   background-color: ${variaveis.vermelho};
 `;
+
+export const InfoContato = styled.div`
+  margin: 16px 0;
+  
+  p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  strong {
+    color: #333;
+  }
+`;

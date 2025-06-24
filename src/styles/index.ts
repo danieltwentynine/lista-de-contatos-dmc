@@ -10,6 +10,10 @@ const EstiloGlobal = createGlobalStyle`
         list-style: none;
         font-family: 'Inter', sans-serif;
     }
+
+    body {
+      background-color: ${variaveis.fundoPagina};
+    }
 `
 
 export default EstiloGlobal

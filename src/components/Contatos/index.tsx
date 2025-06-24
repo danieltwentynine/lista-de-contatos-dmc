@@ -49,6 +49,10 @@ const Contato = ({
       <S.Tag parametro="relacao" relacao={relacao}>
         {relacao}
       </S.Tag>
+      <S.InfoContato>
+        <p><strong>Telefone:</strong> {telefone}</p>
+        <p><strong>Email:</strong> {email}</p>
+      </S.InfoContato>
       <S.Descricao
         disabled={!estaEditando}
         value={descricao}

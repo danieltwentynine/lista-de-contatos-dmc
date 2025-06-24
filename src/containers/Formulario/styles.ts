@@ -7,13 +7,20 @@ export const Form = styled.form`
   font-size: 14px;
   color: #666666;
 
+  input, textarea {
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
   textarea {
     resize: none;
-    margin: 16px 0;
   }
-`;
+`
+
 export const Opcoes = styled.div`
-  margin-botoom: 16px;
+  margin-bottom: 16px;
 
   p {
     margin-bottom: 6px;
@@ -22,9 +29,9 @@ export const Opcoes = styled.div`
   label {
     margin-right: 6px;
   }
-`;
+`
 
 export const Opcao = styled.div`
   display: inline;
   text-transform: capitalize;
-`;
+`
