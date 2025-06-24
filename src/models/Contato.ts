@@ -2,7 +2,8 @@ import * as enums from "../utils/enums/Contatos";
 
 class Contato {
   nome: string;
-  telefone: number;
+  telefone: string;
+  email: string;
   prioridade: enums.Prioridade;
   relacao: enums.Relacao;
   descricao: string;
@@ -10,7 +11,8 @@ class Contato {
 
   constructor(
     titulo: string,
-    telefone: number,
+    telefone: string,
+    email: string,
     prioridade: enums.Prioridade,
     relacao: enums.Relacao,
     descricao: string,
@@ -18,6 +20,7 @@ class Contato {
   ) {
     this.nome = titulo;
     this.telefone = telefone;
+    this.email = email;
     this.prioridade = prioridade;
     this.relacao = relacao;
     this.descricao = descricao;

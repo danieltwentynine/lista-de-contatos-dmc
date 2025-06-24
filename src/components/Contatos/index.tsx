@@ -4,16 +4,16 @@ import { useDispatch } from "react-redux";
 import { remover, editar } from "../../store/reducers/contatos";
 import ContatoClass from "../../models/Contato";
 import { Botao, BotaoSalvar } from "../../styles";
-import * as enums from "../../utils/enums/Contatos";
 
 type Props = ContatoClass;
 
-const Tarefa = ({
+const Contato = ({
     descricao: descricaoOriginal,
     prioridade,
     relacao,
     nome,
     telefone,
+    email,
     id,
 }: Props) => {
   const dispatch = useDispatch();
@@ -67,6 +67,7 @@ const Tarefa = ({
                     relacao,
                     nome,
                     telefone,
+                    email,
                     id,
                   })
                 );
@@ -92,4 +93,4 @@ const Tarefa = ({
   );
 };
 
-export default Tarefa;
+export default Contato;

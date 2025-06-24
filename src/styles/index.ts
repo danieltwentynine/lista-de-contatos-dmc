@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle} from "styled-components";
 import variaveis from "./variaveis";
 
-export const EstiloGlobal = createGlobalStyle`
+const EstiloGlobal = createGlobalStyle`
     * {
         text-decoration: none;
         margin: 0;
@@ -12,25 +12,25 @@ export const EstiloGlobal = createGlobalStyle`
     }
 `
 
+export default EstiloGlobal
+
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 224px auto;
 `
 
-export const MainContainer = styled.div`
-    max-width: 920px;
-    padding: 0 40px;
-    width: 100%;
-    height: 100vh;
-    
-`
+export const MainContainer = styled.main`
+  padding: 0 40px;
+  height: 100vh;
+  overflow-y: scroll;
+`;
 export const Titulo = styled.h2`
   display: block;
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 18px;
   font-weight: bold;
-`
+`;
 
 export const Campo = styled.input`
   padding: 8px;
@@ -40,7 +40,7 @@ export const Campo = styled.input`
   color: #66666;
   border-color: #66666;
   width: 100%;
-`
+`;
 
 export const Botao = styled.button`
   color: #fff;
@@ -52,8 +52,8 @@ export const Botao = styled.button`
   background-color: ${variaveis.azulEscuro};
   border-radius: 8px;
   margin-right: 8px;
-`
+`;
 
 export const BotaoSalvar = styled(Botao)`
   background-color: ${variaveis.verde};
-`
+`;

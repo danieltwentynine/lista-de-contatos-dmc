@@ -61,6 +61,7 @@ const ListaDeContatos = () => {
                 descricao={c.descricao}
                 nome={c.nome}
                 telefone={c.telefone}
+                email={c.email}
                 relacao={c.relacao}
                 prioridade={c.prioridade}
                 id={c.id}

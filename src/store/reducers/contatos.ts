@@ -10,7 +10,8 @@ const initialState: ContatosState = {
   itens: [
     {
       nome: "Daniel Cardoso",
-      telefone: 123456679,
+      telefone: "123456679",
+      email: "daniel@email.com",
       descricao: "irmão mais velho da familia Cardoso",
       prioridade: enums.Prioridade.FAVORITO,
       relacao: enums.Relacao.FAMILIA,
@@ -18,7 +19,8 @@ const initialState: ContatosState = {
     },
     {
       nome: "Sarah Cardoso",
-      telefone: 123456479,
+      telefone: "123456479",
+      email: "sarah@email.com",
       descricao: "irmã do meio da familia Cardoso",
       prioridade: enums.Prioridade.FAVORITO,
       relacao: enums.Relacao.FAMILIA,
@@ -26,7 +28,8 @@ const initialState: ContatosState = {
     },
     {
       nome: "Andre Cardoso",
-      telefone: 123556679,
+      telefone: "123556679",
+      email: "andre@email.com",
       descricao: "irmão do meio da familia Cardoso",
       prioridade: enums.Prioridade.FAVORITO,
       relacao: enums.Relacao.FAMILIA,
@@ -34,7 +37,8 @@ const initialState: ContatosState = {
     },
     {
       nome: "Giovanni Cardoso",
-      telefone: 126456679,
+      telefone: "126456679",
+      email: "giovanni@email.com",
       descricao: "irmão mais novo da familia Cardoso",
       prioridade: enums.Prioridade.FAVORITO,
       relacao: enums.Relacao.FAMILIA,
@@ -42,7 +46,8 @@ const initialState: ContatosState = {
     },
     {
       nome: "Jackson Marques",
-      telefone: 126445679,
+      telefone: "126445679",
+      email: "jackson@email.com",
       descricao: "Chefe de trabalho do Daniel",
       prioridade: enums.Prioridade.NORMAL,
       relacao: enums.Relacao.TRABALHO,
