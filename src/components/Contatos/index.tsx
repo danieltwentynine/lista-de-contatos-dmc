@@ -19,12 +19,21 @@ const Contato = ({
   const dispatch = useDispatch();
   const [estaEditando, setEstaEditando] = useState(false);
   const [descricao, setDescricao] = useState("");
+  const [contatoTelefone, setContatoTelefone] = useState("");
+  const [contatoEmail, setContatoEmail] = useState("");
+
 
   useEffect(() => {
     if (descricaoOriginal.length > 0) {
       setDescricao(descricaoOriginal);
     }
-  }, [descricaoOriginal]);
+    if (telefone.length > 0) {
+      setContatoTelefone(telefone);
+    }
+    if (email.length > 0) {
+      setContatoEmail(email);
+    }
+  }, [descricaoOriginal, telefone, email]);
 
   function cancelarDescricao() {
     setEstaEditando(false);
@@ -34,10 +43,7 @@ const Contato = ({
   return (
     <S.Card>
       <label htmlFor={nome}>
-        <input
-          type="checkbox"
-          id={nome}
-        ></input>
+        <input type="checkbox" id={nome}></input>
         <S.Titulo>
           {estaEditando && <em>Editando: </em>}
           {nome}
@@ -50,8 +56,24 @@ const Contato = ({
         {relacao}
       </S.Tag>
       <S.InfoContato>
-        <p><strong>Telefone:</strong> {telefone}</p>
-        <p><strong>Email:</strong> {email}</p>
+        <p>
+          <strong>Telefone:</strong>
+          <input
+            type="text"
+            disabled={!estaEditando}
+            value={contatoTelefone}
+            onChange={(evento) => setContatoTelefone(evento.target.value)}
+          />
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <input
+            type="text"
+            disabled={!estaEditando}
+            value={contatoEmail}
+            onChange={(evento) => setContatoEmail(evento.target.value)}
+          />
+        </p>
       </S.InfoContato>
       <S.Descricao
         disabled={!estaEditando}
@@ -70,8 +92,8 @@ const Contato = ({
                     prioridade,
                     relacao,
                     nome,
-                    telefone,
-                    email,
+                    telefone: contatoTelefone,
+                    email: contatoEmail,
                     id,
                   })
                 );
