@@ -10,7 +10,7 @@ class Contato {
   id: number;
 
   constructor(
-    titulo: string,
+    nome: string,
     telefone: string,
     email: string,
     prioridade: enums.Prioridade,
@@ -18,7 +18,7 @@ class Contato {
     descricao: string,
     id: number
   ) {
-    this.nome = titulo;
+    this.nome = nome;
     this.telefone = telefone;
     this.email = email;
     this.prioridade = prioridade;
